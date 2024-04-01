@@ -89,9 +89,24 @@ g6
 out_mat_df<-data.frame(outMat)
 out_mat_df$treatment<-sample_df$Treatment
 
-write.csv(out_mat_df,"C:/Users/ccape/Downloads/NMR_data/Spec_data.csv")
+write.csv(out_mat_df,"path choosen by user")
 
-write.csv(Clust_df,"C:/Users/ccape/Downloads/NMR_data/Cluster_data.csv")
+write.csv(Clust_df,"path choosen by user")
+
+#allows for easeir annotation
+B0_cols<-out_mat_df %>% select(starts_with("B0"))
+write.csv(B0_cols,"")
+
+
+
+B1_cols<-out_mat_df %>% select(starts_with("B1"))
+write.csv(B1_cols,"")
+
+B2_cols<-out_mat_df %>% select(starts_with("B2"))
+write.csv(B2_cols,"")
+
+B3_cols<-out_mat_df %>% select(starts_with("B2"))
+write.csv(B3_cols,"")
 
 
 #orginal code came from https://cran.r-project.org/web/packages/Rnmr1D/vignettes/Rnmr1D.html  
